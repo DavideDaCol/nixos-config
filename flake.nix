@@ -21,11 +21,7 @@
     inherit (self) outputs;
     # Supported systems for flake packages, shell, etc.
     systems = [
-      "aarch64-linux"
-      "i686-linux"
       "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
     ];
     # generates an attribute by calling a function you pass to it, with each system as an argument
     forAllSystems = nixpkgs.lib.genAttrs systems;
