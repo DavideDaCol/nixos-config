@@ -50,9 +50,9 @@
       nrtf = "nixos-rebuild test --flake .#davide";
     };
   };
-
-  programs.hyprland.enable = true;
-  wayland.windowManager.hyprland.enable = true;
+  
+  programs.kitty.enable = true; # required for the default Hyprland config
+  wayland.windowManager.hyprland.enable = true; # enable Hyprland
 
   home.sessionVariables = {
     EDITOR = "nano";
