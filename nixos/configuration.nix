@@ -57,6 +57,9 @@
   #turn on nvidia's stupid drivers
   hardware.graphics = {
     enable = true;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    nvidiaSettings = true;
     extraPackages = with pkgs;
     [nvidia-vaapi-driver];
   };
@@ -109,7 +112,6 @@
     pkgs.vim
     pkgs.wget
     pkgs.kitty
-    inputs.home-manager.packages.${pkgs.system}.default
   ];
 
   home-manager = {

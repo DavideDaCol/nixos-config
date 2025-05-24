@@ -46,8 +46,8 @@
     enable = true;
     shellAliases = {
       ll = "ls -l";
-      nrsf = "nixos-rebuild switch --flake .#davide";
-      nrtf = "nixos-rebuild test --flake .#davide";
+      nrsf = "nixos-rebuild switch --flake .#nixos";
+      nrtf = "nixos-rebuild test --flake .#nixos";
     };
   };
   
