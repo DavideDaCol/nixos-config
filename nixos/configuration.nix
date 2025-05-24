@@ -57,15 +57,17 @@
   #turn on nvidia's stupid drivers
   hardware.graphics = {
     enable = true;
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    nvidiaSettings = true;
     extraPackages = with pkgs;
     [nvidia-vaapi-driver];
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = false;
+  hardware.nvidia= {
+    open = false;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    nvidiaSettings = true;
+  };
 
   # Turn on bluetooth
   hardware.bluetooth.enable = true;
