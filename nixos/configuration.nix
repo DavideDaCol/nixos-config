@@ -118,6 +118,12 @@
     pkgs.kitty
   ];
 
+  # fonts install
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    fira-code-nerdfont
+  ];
+
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {

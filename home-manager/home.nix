@@ -42,13 +42,6 @@
     vscode
   ];
 
-  # fonts install
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-  ];
-
-
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -60,10 +53,14 @@
   
   programs.kitty = { 
     enable = true; # required for the default Hyprland config
+    font = { 
+      name = "JetBrains Mono";
+      size = 12;
+    };
     settings = {
-      confirm_os_window_close = false;
-    }
-  }
+      confirm_os_window_close = 0;
+    };
+  };
 
     wayland.windowManager.hyprland = {
       enable = true;
