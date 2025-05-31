@@ -51,6 +51,7 @@
             # avoids duplicate packages
             home-manager.useUserPackages = true;
 
+            # import the home manager config
             home-manager.users.davide = import ./home-manager/home.nix;
 
             # This line avoids the file conflict error

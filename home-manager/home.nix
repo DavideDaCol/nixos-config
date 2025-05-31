@@ -61,6 +61,8 @@
           [
             "$mod, F, exec, firefox"
             ", Print, exec, grimblast copy area"
+	          "$mod, Q, exec, kitty"
+            "$mod, R, exec, rofi"
           ]
           ++ (
             # workspaces

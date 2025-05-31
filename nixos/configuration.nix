@@ -109,6 +109,8 @@
     };
   };
 
+  security.sudo.enable = true;
+
   environment.systemPackages = [
     pkgs.git
     pkgs.vim
