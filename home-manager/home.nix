@@ -62,10 +62,11 @@
     };
   };
 
-  programs.vscode.profiles.davide.userSettings = {
+  programs.vscode.userSettings = {
     "files.autoSave" = "off";
     "editor.tabSize" = 4;
     "workbench.colorTheme" = "Andromeda";
+    "workbench.iconTheme" = "vscode-icons";
   };
 
     wayland.windowManager.hyprland = {
