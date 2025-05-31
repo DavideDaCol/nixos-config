@@ -42,6 +42,13 @@
     vscode
   ];
 
+  # fonts install
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+  ];
+
+
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -51,7 +58,12 @@
     };
   };
   
-  programs.kitty.enable = true; # required for the default Hyprland config
+  programs.kitty{ 
+    enable = true; # required for the default Hyprland config
+    settings = {
+      confirm_os_window_close = false;
+    }
+  }
 
     wayland.windowManager.hyprland = {
       enable = true;
