@@ -45,6 +45,17 @@
         modules = [
           # main nixos configuration file <
           ./nixos/configuration.nix
+          # Add the Home Manager module
+          home-manager.nixosModules.home-manager
+          {
+            # avoids duplicate packages
+            home-manager.useUserPackages = true;
+
+            home-manager.users.davide = import ./home-manager/home.nix;
+
+            # This line avoids the file conflict error
+            home-manager.backupFileExtension = "backup";
+          }
         ];
       };
     };
