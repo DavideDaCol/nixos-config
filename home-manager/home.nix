@@ -62,6 +62,12 @@
     };
   };
 
+  programs.vscode.profiles.davide.userSettings = {
+    "files.autoSave" = "off";
+    "editor.tabSize" = 4;
+    "workbench.colorTheme" = "Andromeda";
+  };
+
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
@@ -71,7 +77,7 @@
             "$mod, F, exec, firefox"
             ", Print, exec, grimblast copy area"
 	          "$mod, Q, exec, kitty"
-            "$mod, R, exec, rofi"
+            "$mod, R, exec, rofi -show drun"
           ]
           ++ (
             # workspaces
