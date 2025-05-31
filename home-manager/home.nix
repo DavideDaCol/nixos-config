@@ -58,7 +58,7 @@
     };
   };
   
-  programs.kitty{ 
+  programs.kitty = { 
     enable = true; # required for the default Hyprland config
     settings = {
       confirm_os_window_close = false;
