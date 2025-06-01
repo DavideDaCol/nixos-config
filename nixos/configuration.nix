@@ -125,7 +125,7 @@
   # fonts install
   fonts.packages = with pkgs; [
     jetbrains-mono
-    fira-code-nerdfont
+    nerd-fonts.fira-code
   ];
 
   home-manager = {

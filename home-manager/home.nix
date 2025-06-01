@@ -63,7 +63,7 @@
   };
 
   #TODO: find why this doesn't work lol
-  programs.vscode.userSettings = {
+  programs.vscode.profiles.default.userSettings = {
     "files.autoSave" = "off";
     "editor.tabSize" = 4;
     "workbench.colorTheme" = "Andromeda";
