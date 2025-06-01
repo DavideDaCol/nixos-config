@@ -69,6 +69,17 @@
     nvidiaSettings = true;
   };
 
+  #apparently I need this? TIL
+  programs.hyprland.enable = true;
+
+  services = {
+    xserver.enable = true;
+    displayManager = {
+      sddm.enable = true;
+      sddm.wayland.enable = true;
+    };
+  };
+
   # Turn on bluetooth
   hardware.bluetooth.enable = true;
 
