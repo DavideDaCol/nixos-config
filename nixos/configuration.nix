@@ -111,11 +111,15 @@
 
   security.sudo.enable = true;
 
-  environment.systemPackages = [
-    pkgs.git
-    pkgs.vim
-    pkgs.wget
-    pkgs.kitty
+  environment.systemPackages = with pkgs; [
+    git
+    vim
+    wget
+    kitty
+    #TODO: move these to a "dev-env" module (subomdules for each language)
+    gcc
+    gnumake
+    valgrind
   ];
 
   # fonts install

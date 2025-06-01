@@ -46,8 +46,8 @@
     enable = true;
     shellAliases = {
       ll = "ls -l";
-      nrsf = "nixos-rebuild switch --flake .#nixos";
-      nrtf = "nixos-rebuild test --flake .#nixos";
+      nrsf = "sudo nixos-rebuild switch --flake .#nixos";
+      nrtf = "sudo nixos-rebuild test --flake .#nixos";
     };
   };
   
@@ -62,6 +62,7 @@
     };
   };
 
+  #TODO: find why this doesn't work lol
   programs.vscode.userSettings = {
     "files.autoSave" = "off";
     "editor.tabSize" = 4;
