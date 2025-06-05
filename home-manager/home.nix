@@ -28,7 +28,6 @@
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "davide";
     homeDirectory = "/home/davide";
@@ -40,6 +39,9 @@
     neofetch
     rofi
     vscode
+    obsidian
+    kdePackages.okular
+    localsend
   ];
 
   programs.bash = {
