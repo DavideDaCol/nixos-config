@@ -41,6 +41,7 @@
     obsidian
     kdePackages.okular
     localsend
+    anki
   ];
 
   programs.bash = {
