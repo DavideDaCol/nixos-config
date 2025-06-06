@@ -38,7 +38,6 @@
     bat
     neofetch
     rofi
-    vscode
     obsidian
     kdePackages.okular
     localsend
@@ -64,12 +63,15 @@
     };
   };
 
-  #TODO: find why this doesn't work lol
-  programs.vscode.profiles.default.userSettings = {
-    "files.autoSave" = "off";
-    "editor.tabSize" = 4;
-    "workbench.colorTheme" = "Andromeda";
-    "workbench.iconTheme" = "vscode-icons";
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    profiles.default.userSettings = {
+      "files.autoSave" = "off";
+      "editor.tabSize" = 4;
+      "workbench.colorTheme" = "Andromeda";
+      "workbench.iconTheme" = "vscode-icons";
+    };
   };
 
   wayland.windowManager.hyprland = {
@@ -84,6 +86,10 @@
           "$mod, R, exec, rofi -show drun"
           "$mod, C, killactive"
           "$mod, M, exit"
+          "$mod, H, movefocus, l"
+          "$mod, L, movefocus, r"
+          "$mod, K, movefocus, u"
+          "$mod, J, movefocus, d"
         ]
         ++ (
           # workspaces
