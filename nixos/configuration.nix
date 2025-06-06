@@ -78,6 +78,13 @@
       sddm.enable = true;
       sddm.wayland.enable = true;
     };
+
+    #add remote desktop support
+    xrdp = {
+      enable = true;
+      audio.enable = true;
+      openFirewall = true;
+    };
   };
 
   # Turn on bluetooth
