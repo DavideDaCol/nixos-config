@@ -42,6 +42,7 @@
     kdePackages.okular
     localsend
     anki
+    reaper
   ];
 
   programs.bash = {
@@ -74,6 +75,8 @@
       "workbench.iconTheme" = "vscode-icons";
     };
   };
+
+  programs.vesktop.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
